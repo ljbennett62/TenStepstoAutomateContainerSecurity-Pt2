@@ -1,9 +1,8 @@
-# TenStepstoAutomateContainerSecurity-Pt2
-Automating Container Security Into the CI/CD Pipeline - Operations Point of View
+# Automating Container Security Into the CI/CD Pipeline - Operations Point of View
 
 ## Introduction
 
-Welcome to Part 2 of automating Container security into the CI/CD Pipline targeted at the Operations role. This is part of a 2 part series.  If you haven't read Part 1, please do so before reading this article.
+Welcome to Part 2 of automating Container security into the CI/CD Pipeline targeted at the Operations role. This is second part of a 2 part series.  If you haven't read Part 1 <insert link>, please do so before reading this article.
 
 ## Security Policy as Code and Behavioral Learning
 
@@ -19,15 +18,15 @@ Behavioral Learning is a useful technique to learn and characterize an applicati
 
 ### Key Automation Steps in Bridging the CI/CD pipeline include: 
 
-5. Security Policy as Code and Behavioral Learning
+5. **Security Policy as Code and Behavioral Learning**
 
-A. Capture the ‘allowed’ application behavior in standard CRD yaml files. Behavior should include allowed network connections and protocols including ingress/egress, processes, and file access activity. Security policies that are not tied to specific applications such as global security rules can also be expressed in separate CRDs.
+* Capture the ‘allowed’ application behavior in standard CRD yaml files. Behavior should include allowed network connections and protocols including ingress/egress, processes, and file access activity. Security policies that are not tied to specific applications such as global security rules can also be expressed in separate CRDs.
 
-B. Build review, approval, and check-in steps into the pipeline so the security policy as code represents the ultimate authority for production security rules.
+* Build review, approval, and check-in steps into the pipeline so the security policy as code represents the ultimate authority for production security rules.
 
-C. Deploy the security policy CRDs into the production environment before the new or updated applications are deployed, thereby ensuring the new workloads are secured from the moment they start running.
+* Deploy the security policy CRDs into the production environment before the new or updated applications are deployed, thereby ensuring the new workloads are secured from the moment they start running.
 
-6. Use Behavioral Learning to Automate Security Policy
+6. ** Use Behavioral Learning to Automate Security Policy**
 
 A. In the test, QA, and/or staging environments, run the applications and their associated test suites and use behavioral learning to capture allowed application behavior in the form of network, process, file and other security rules.
 
@@ -62,19 +61,19 @@ Once they are running in production, containers, their hosts, and the orchestrat
 
 Run-time security starts with admission controls as a gatekeeper for the production environment, and progress through run-time scanning and compliance checks to real-time attack prevention.
 
-7. Use Admission Controls to Prevent Vulnerable or Unauthorized Deployments
+7. **Use Admission Controls to Prevent Vulnerable or Unauthorized Deployments**
 
 A. Use criteria such as vulnerability scan results, namespaces, registries, and container properties (e.g. running as root) to control deployments.
 
 B. While creation of these rules can be automated or manual, enforcement and alerting should be automated.
 
-8. Deploy a Layer7 Container Firewall for Automated Segmentation and Threat Detection
+8. **Deploy a Layer7 Container Firewall for Automated Segmentation and Threat Detection**
 
 A. Automate blocking, quarantine, packet capture, and alerting for network attacks and segmentation violations.
 
 B. Use Security Policy as Code to automate rule creation and updates.
 
-9. Use Endpoint Security Controls FOR Containers And Hosts.
+9. **Use Endpoint Security Controls FOR Containers And Hosts**
 
 A. Automate blocking and alerting for suspicious process and file activity in containers and hosts.
 
@@ -90,7 +89,7 @@ With a cloud-native, Layer 7 container segmentation solution, workloads can be s
 
 Ultimately, to give the business the most flexibility for rapid release and optimal resource utilization, container segmentation must be enforced on each pod and follow application workloads as they scale and move dynamically. In this micro-perimeter vision article, NeuVector CTO Gary Duan outlines a vision for cloud security where the protection perimeter surrounds the workload even as it moves across hybrid clouds.
 
-10. Automating Alerting and Realtime Responses
+10. **Automating Alerting and Realtime Responses**
 
 A. Generate special alerts for critical security events.
 
