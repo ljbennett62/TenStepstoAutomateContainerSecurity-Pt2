@@ -26,11 +26,11 @@ Behavioral Learning is a useful technique to learn and characterize an applicati
 
 * Deploy the security policy CRDs into the production environment before the new or updated applications are deployed, thereby ensuring the new workloads are secured from the moment they start running.
 
-6. ** Use Behavioral Learning to Automate Security Policy**
+6. **Use Behavioral Learning to Automate Security Policy**
 
-A. In the test, QA, and/or staging environments, run the applications and their associated test suites and use behavioral learning to capture allowed application behavior in the form of network, process, file and other security rules.
+* In the test, QA, and/or staging environments, run the applications and their associated test suites and use behavioral learning to capture allowed application behavior in the form of network, process, file and other security rules.
 
-B. Export the rules as a CRD for review and use in Step 5 above.
+* Export the rules as a CRD for review and use in Step 5 above.
 
 The diagram below shows the workflow using behavioral learning to help generate the security policy CRD for a new application.
 
@@ -63,21 +63,21 @@ Run-time security starts with admission controls as a gatekeeper for the product
 
 7. **Use Admission Controls to Prevent Vulnerable or Unauthorized Deployments**
 
-A. Use criteria such as vulnerability scan results, namespaces, registries, and container properties (e.g. running as root) to control deployments.
+* Use criteria such as vulnerability scan results, namespaces, registries, and container properties (e.g. running as root) to control deployments.
 
-B. While creation of these rules can be automated or manual, enforcement and alerting should be automated.
+* While creation of these rules can be automated or manual, enforcement and alerting should be automated.
 
 8. **Deploy a Layer7 Container Firewall for Automated Segmentation and Threat Detection**
 
-A. Automate blocking, quarantine, packet capture, and alerting for network attacks and segmentation violations.
+* Automate blocking, quarantine, packet capture, and alerting for network attacks and segmentation violations.
 
-B. Use Security Policy as Code to automate rule creation and updates.
+* Use Security Policy as Code to automate rule creation and updates.
 
 9. **Use Endpoint Security Controls FOR Containers And Hosts**
 
-A. Automate blocking and alerting for suspicious process and file activity in containers and hosts.
+* Automate blocking and alerting for suspicious process and file activity in containers and hosts.
 
-B. Use Security Policy as Code to automate rule creation and updates.
+* Use Security Policy as Code to automate rule creation and updates.
 
 ### What is Container Network Segmentation
 
@@ -91,13 +91,13 @@ Ultimately, to give the business the most flexibility for rapid release and opti
 
 10. **Automating Alerting and Realtime Responses**
 
-A. Generate special alerts for critical security events.
+* Generate special alerts for critical security events.
 
-B. Quarantine suspicious containers.
+* Quarantine suspicious containers.
 
-C. Initiate packet captures for investigation and forensics.
+* Initiate packet captures for investigation and forensics.
 
-D. Integrate with case management tools to address security and compliance violations.
+* Integrate with case management tools to address security and compliance violations.
 
 
 NeuVector provides several mechanisms for automation and integration in Step 10. These include SYSLOG event output, customized webhook alerts, automated packet capture & quarantine, and a REST API for customized, scripted automations. A Prometheus exporter and Grafana dashboard is
